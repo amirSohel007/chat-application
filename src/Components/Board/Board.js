@@ -33,7 +33,7 @@ const send = () => {
           <h1>{name}</h1>
           <h2>Supah</h2>
           <figure className="avatar">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/156381/profile/profile-80.jpg" /></figure>
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/156381/profile/profile-80.jpg" alt=""/></figure>
         </div>
         <div className="messages">
         <ScrollToBottom>
