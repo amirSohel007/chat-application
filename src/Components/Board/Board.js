@@ -9,7 +9,7 @@ const Board = ({ location }) => {
     const socket = io(hostURL);
     const [message, setMessage] = useState([]);
     const emitObject = {name, message}
-   
+
 const send = () => {
         socket.emit("message", emitObject);
         const messageBox = document.querySelector('.message-input');
@@ -22,9 +22,9 @@ const send = () => {
         let messagelist = `<div class="message new"> <span>${responce.name}</span>${responce.message}</div> `
         messageContainer.innerHTML += messagelist;
     });
-    },[])
+    })
 
-   
+
 
     return(
         <div>
@@ -38,7 +38,6 @@ const send = () => {
         <div className="messages">
         <ScrollToBottom>
           <div className="messages-content">
-          
           </div>
           </ScrollToBottom>
         </div>
