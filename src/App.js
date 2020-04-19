@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="main">
     <BrowserRouter>
-        <Route exact path="/join" component={JoinChat}></Route>
+        <Route exact path="/" component={JoinChat}></Route>
         <Route exact path="/chat" component={Chat}></Route>
         <Route exact path="/board" component={Board}></Route>
     </BrowserRouter>
