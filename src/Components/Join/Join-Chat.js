@@ -3,7 +3,6 @@ import { NavLink} from "react-router-dom";
 
 const JoinChat = () => {
   const [name, setName] = useState("");
-  const [room, setRoom] = useState("");
   return (
     <div className="full-wrapper">
       <div className="half-screen">
@@ -22,7 +21,7 @@ const JoinChat = () => {
           placeholder="Enter Name"
           onChange={(event) => setName(event.target.value)}
         />
-     
+
       <NavLink onClick={(event) => (!name) ? event.preventDefault() : "null"} to={`/chat?name=${name}`} className="wd-100"><button>Join Chat</button></NavLink>
       </div>
     </div>

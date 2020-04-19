@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import queryString from "query-string";
 import io from "socket.io-client";
 import {Link} from "react-router-dom"
