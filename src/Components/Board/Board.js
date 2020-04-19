@@ -21,7 +21,7 @@ const send = () => {
         let messageContainer = document.querySelector('.messages-content');
         let messagelist = `<div class="message new"> <span>${responce.name}</span>${responce.message}</div> `
         messageContainer.innerHTML += messagelist;
-    });
+    },[]);
     })
 
 
