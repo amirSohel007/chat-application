@@ -522,3 +522,9 @@ body {
 button:focus {
   outline: none;
 }
+
+.message-personal span {
+  width: 100px;
+  display: block;
+  transform: translateX(-60px);
+}
