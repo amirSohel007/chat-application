@@ -7,7 +7,7 @@ const Board = ({ location }) => {
     const { name } = queryString.parse(location.search);
     const hostURL = "https://websocket-chat-app-react.herokuapp.com/";
     const socket = io(hostURL);
-    const [message, setMessage] = useState([]);
+    const [message, setMessage] = useState({});
     const emitObject = {name, message}
 
 const send = () => {
@@ -19,10 +19,10 @@ const send = () => {
     useEffect(()=> {
       socket.on("message", (responce) => {
         let messageContainer = document.querySelector('.messages-content');
-        let messagelist = `<div class="message new"> <span>${responce.name}</span>${responce.message}</div> `
+        let  messagelist = `<div class="message ${name === responce.name ? 'message-personal new' : ''}"> <span>${responce.name}</span>${responce.message}</div> `
         messageContainer.innerHTML += messagelist;
-    },[]);
-    })
+    });
+  },[])
 
 
 
